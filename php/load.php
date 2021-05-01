@@ -1,7 +1,7 @@
 <?php
 $f = fopen('php://stdin', 'r'); # we'll be waiting for data at STDIN
 $manticore = new mysqli('manticore', '', '', '', 9306); # let's connect to Manticore Search via MySQL protocol
-$manticore->query("CREATE TABLE IF NOT EXISTS rt(title text, body text, url text stored) html_strip=1 index_exact_words=1 morphology='lemmatize_en_all' expand_keywords=1 min_prefix_len=3 index_sp=1"); /* creating a table "rt" if it doesn't exist with the following settings:
+$manticore->query("CREATE TABLE IF NOT EXISTS rt(title text, body text, url text stored) html_strip = 1 index_exact_words = 1 expand_keywords = 1 min_prefix_len = 3 index_sp = 1"); /* creating a table "rt" if it doesn't exist with the following settings:
 - html_strip='1': stripping HTML is on, index_exact_words='1' keep exact words
 - html_remove_elements='style,script,a': for HTML tags <style>/<script>/<a> we don't need their contents, so we are stripping them completely
 - morphology='stem_en': we'll use English stemmer as a morphology processor
