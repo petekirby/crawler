@@ -1,0 +1,11 @@
+{
+	"clusters":	{
+	},
+	"indexes":	{
+		"rt":	{
+			"type":	"rt",
+			"path":	"/var/lib/manticore/rt/rt",
+			"from_replication":	false
+		}
+	}
+}
